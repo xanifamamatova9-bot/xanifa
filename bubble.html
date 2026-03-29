@@ -1,0 +1,60 @@
+{% comment %} {% extends 'base.html' %} 
+
+{% block title %}
+Bosh sahifa
+{% endblock %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h1 class="display-4">Salom </h1>
+</div>
+{% endblock %}
+{% endcomment %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubblesort</title>
+    <link rel="stylesheet" href="{% static 'css/selection.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="news-card">
+
+            <div class="mavzu-box">
+                <h1 class="mavzu">{{ p.mavzu }}</h1>
+            </div>
+
+            <div class="content-row">
+
+                <div class="tana-box">
+                    <p>{{ p.tana }}</p>
+                </div>
+
+                <div class="right-box">
+                    <div class="rasm-box">
+                        {% if p.rasm %}
+                            <img src="{{ p.rasm.url }}" alt="{{ p.mavzu }}">
+                        {% else %}
+                            <p>Rasm mavjud emas</p>
+                        {% endif %}
+                    </div>
+
+                    <div class="vaqt-box">
+                        <span>{{ p.yaratilgan_vaqti }}</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+       
+    </div>
+
+</body>
+</html>

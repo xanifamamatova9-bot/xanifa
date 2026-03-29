@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <center>
+        <table border="3">
+            {% for i in p %}
+            <tr>
+                <td>{{i.mavzu}}</td>
+                <td>{{i.tana}}</td>
+                <td><img src="{{ i.rasm.url }}" width="100"></td>
+                <td>{{i.yaratilgan_vaqti}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
